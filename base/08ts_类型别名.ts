@@ -3,3 +3,5 @@
 */
 type Message = string | string[];
 // 注意：类型别名，诚如其名，即我们仅仅是给类型取了一个新的名字，并不是创建了一个新的类型。
+
+export { Message };

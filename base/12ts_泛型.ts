@@ -52,35 +52,35 @@
   interface GetSizeT {
     size: number;
   }
-  const getSize1 = <T extends GetSizeT>(arg: T): T {
+  const getSize1 = <T extends GetSizeT>(arg: T): T => {
     console.log(arg.size); // 类型“T”上不存在属性“size”。
     return arg;
-  }
-  getSize1<any>({ size: 1,name:1  });
+  };
+  getSize1<any>({ size: 1, name: 1 });
 }
 
 // 泛型接口
 {
-  interface ICreateObj<K, V>{
-    name: K,
-    age:V
+  interface ICreateObj<K, V> {
+    name: K;
+    age: V;
   }
-  let obj:ICreateObj<number,string> = {name:1,age:'20'}
+  let obj: ICreateObj<number, string> = { name: 1, age: "20" };
 }
 
 // 泛型的默认参数
 {
-  interface ICreateObj<K , V = number>{
-    name: K,
-    age:V
+  interface ICreateObj<K, V = number> {
+    name: K;
+    age: V;
   }
-  let obj:ICreateObj<number,string> = {name:1,age:'20'}
+  let obj: ICreateObj<number, string> = { name: 1, age: "20" };
 }
 
 // 泛型类
 {
-  class Person<T>{
+  class Person<T> {
     default: T;
-    add:(a:T,b:T)=>T 
+    add: (a: T, b: T) => T;
   }
 }
